@@ -16,21 +16,18 @@ function CodelandUsernameValidation(str) {
   if (str.length < 4 || str.length > 25) {
     return false;
   }
+
   let firstChar = str.charAt(0);
-  if (!"/[a-zA-Z]/".test(firstChar)) {
+  if (!/[a-zA-Z]/.test(firstChar)) {
     return false;
   }
-
-  if (!"/^[a-zA-Z0-9_]+$/".test(str)) {
+  if (!/^[a-zA-Z0-9_]+$/.test(str)) {
     return false;
   }
-
-  if (!str.endsWidth("_")) {
+  if (str.endsWith("_")) {
     return false;
   }
   return true;
 }
-
-// keep this function call here
 console.log(CodelandUsernameValidation("aa_"));
 console.log(CodelandUsernameValidation("u__hello_world123"));
