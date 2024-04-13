@@ -2,7 +2,7 @@
 
 //  Time: O(N)
 //  Space: O(1)
-https: var map = function (arr, fn) {
+var map = function (arr, fn) {
   for (let i = 0; i < arr.length; ++i) {
     arr[i] = fn(arr[i], i);
   }
