@@ -19,4 +19,16 @@ function reverseString(str) {
   }, "");
 }
 
+//Time: O(N/2)= O(N)
+//Space: O(1)
+function reverseString(s){
+  let n = s.length
+  let i = 0, j = n - 1
+  while (i < j){
+    [s[i], s[j]] = [s[j], s[i]]
+    i++;
+    j--;
+  }
+}
+
 reverseString("word");
